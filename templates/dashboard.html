@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Dashboard</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Logo</h2>
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Age</a></li>
+                <li><a href="#">Gender</a></li>
+                <li><a href="#">Geo</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h1>Carbon Footprint Dashboard</h1>
+                <p>Analyze your company's energy consumption and carbon emissions.</p>
+            </div>
+            <div class="metrics">
+                <div class="metric-card">
+                    <h2>Total Emissions</h2>
+                    <p>{{ emissions.totalEmissions|round(2) }} kg CO2</p>
+                </div>
+                <div class="metric-card">
+                    <h2>Total Consumption</h2>
+                    <p>{{ emissions.totalConsumption|round(2) }} kWh</p>
+                </div>
+                <div class="metric-card">
+                    <h2>Emission Factor</h2>
+                    <p>{{ emissions.emissionFactor|round(2) }} kg CO2/kWh</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h2>Monthly Emissions</h2>
+                <canvas id="emissionsChart"></canvas>
+            </div>
+            <!-- Additional sections can go here -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Your Chart.js code here
+    </script>
+</body>
+</html>
