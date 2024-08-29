@@ -28,12 +28,12 @@
                     <p>{{ emissions.totalEmissions|round(2) }} kg CO2</p>
                 </div>
                 <div class="metric-card">
-                    <h2>Total Consumption</h2>
-                    <p>{{ emissions.totalConsumption|round(2) }} kWh</p>
+                    <h2>Total Emissions for Plant</h2>
+                    <p>{{ emissions.totalEmissions_plant|round(2) }} kg CO2</p>
                 </div>
                 <div class="metric-card">
-                    <h2>Emission Factor</h2>
-                    <p>{{ emissions.emissionFactor|round(2) }} kg CO2/kWh</p>
+                    <h2>Total Emissions for Mine</h2>
+                    <p>{{ emissions.totalEmissions_mine|round(2) }} kg CO2</p>
                 </div>
             </div>
             <div class="chart-container">
