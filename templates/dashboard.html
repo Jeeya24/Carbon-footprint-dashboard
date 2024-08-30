@@ -24,8 +24,8 @@
         </div>
         <div class="main-content">
             <div class="dashboard-header">
-                <h1>Carbon Footprint Dashboard</h1>
-                <p>Analyze your company's energy consumption and carbon emissions.</p>
+                <h1>Carbon Footprint Dashboard - XYZ Talc</h1>
+                <p>Analyze your company's energy consumption and carbon emissions</p>
                 <input id="button_april" value="April" name="month" type="radio">April</input>
                 <input id="button_may" value="May" name="month" type="radio">May</input>
                 <input id="button_june" value="June" name="month" type="radio">June</input>
@@ -34,19 +34,19 @@
             <div class="metrics">
                 <div class="metric-card">
                     <h2>Total Emissions</h2>
-                    <p>{{ emissions.totalEmissions|round(2) }} kg CO2</p>
+                    <p>{{ emissions.totalEmissions|round(2) }} kg CO<sub>2</sub></p>
                 </div>
                 <div class="metric-card">
                     <h2>Total Emissions for Plant</h2>
-                    <p>{{ emissions.totalEmissions_plant|round(2) }} kg CO2</p>
+                    <p>{{ emissions.totalEmissions_plant|round(2) }} kg CO<sub>2</sub></p>
                 </div>
                 <div class="metric-card">
                     <h2>Total Emissions for Mine</h2>
-                    <p>{{ emissions.totalEmissions_mine|round(2) }} kg CO2</p>
+                    <p>{{ emissions.totalEmissions_mine|round(2) }} kg CO<sub>2</sub></p>
                 </div>
             </div>
             <div class="chart-container">
-                <h2>Monthly Emissions</h2>
+                <h2 id="chartHeading">Monthly Emissions</h2>
                 <canvas id="emissionsChart"></canvas>
             </div>
             <!-- Additional sections can go here -->
@@ -54,7 +54,32 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-    
+        const ctx = document.getElementById('emissionsChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [ 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Mine (kg CO2)',
+                    data: [453541.18, 481505.64, 501247.14, 388329.04] ,
+                    borderWidth: 5
+                },
+                {
+                    label: 'Plant (kg CO2)',
+                    data: [ 216526.74, 236814.36, 230356.86, 197150.96],
+                    borderWidth: 5
+                }
+            ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>

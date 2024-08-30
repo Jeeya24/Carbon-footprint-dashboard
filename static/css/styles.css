@@ -10,7 +10,7 @@ body {
 }
 .sidebar {
     width: 200px;
-    background-color: #333;
+    background-color: #002e06;
     color: white;
     padding: 20px;
 }
@@ -57,6 +57,9 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    max-height: 400px;
+    max-width: 700px;
+    overflow-y: auto;
 }
 .additional-info {
     display: grid;
@@ -73,4 +76,8 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-size: 48px;
     margin-bottom: 0px;
+}
+
+#chartHeading {
+    margin: 0px;
 }
