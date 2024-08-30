@@ -69,3 +69,8 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+#logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 48px;
+    margin-bottom: 0px;
+}

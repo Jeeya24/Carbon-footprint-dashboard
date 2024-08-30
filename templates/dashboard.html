@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Footprint Dashboard</title>
@@ -9,18 +12,24 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <h2>Logo</h2>
+            <h2 id="logo">CARBON TRACKER</h2>
+        
             <ul>
                 <li><a href="#" class="active">Dashboard</a></li>
-                <li><a href="#">Age</a></li>
-                <li><a href="#">Gender</a></li>
-                <li><a href="#">Geo</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Production Data</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Help/Support</a></li>
             </ul>
         </div>
         <div class="main-content">
             <div class="dashboard-header">
                 <h1>Carbon Footprint Dashboard</h1>
                 <p>Analyze your company's energy consumption and carbon emissions.</p>
+                <input id="button_april" value="April" name="month" type="radio">April</input>
+                <input id="button_may" value="May" name="month" type="radio">May</input>
+                <input id="button_june" value="June" name="month" type="radio">June</input>
+                <input id="button_july" value="July" name="month" type="radio">July</input>
             </div>
             <div class="metrics">
                 <div class="metric-card">
@@ -45,7 +54,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Your Chart.js code here
+    
     </script>
 </body>
 </html>
